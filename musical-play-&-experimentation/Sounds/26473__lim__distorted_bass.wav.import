@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://ckhi4qa8jsail"
-path="res://.godot/imported/26473__lim__distorted_bass.wav-dc686f46257b0cf3cbc1903d85a14846.sample"
+path="res://.godot/imported/26473__lim__distorted_bass.wav-1932fe5296f1429507fa8755afa420cc.sample"
 
 [deps]
 
-source_file="res://26473__lim__distorted_bass.wav"
-dest_files=["res://.godot/imported/26473__lim__distorted_bass.wav-dc686f46257b0cf3cbc1903d85a14846.sample"]
+source_file="res://Sounds/26473__lim__distorted_bass.wav"
+dest_files=["res://.godot/imported/26473__lim__distorted_bass.wav-1932fe5296f1429507fa8755afa420cc.sample"]
 
 [params]
 

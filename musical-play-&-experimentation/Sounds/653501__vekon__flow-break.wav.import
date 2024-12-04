@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://0bxx676eu6bi"
-path="res://.godot/imported/653501__vekon__flow-break.wav-da9ce8da08684aa781d760a79f237404.sample"
+path="res://.godot/imported/653501__vekon__flow-break.wav-d457435aed433ecfbaaf54b77ec1ac14.sample"
 
 [deps]
 
-source_file="res://653501__vekon__flow-break.wav"
-dest_files=["res://.godot/imported/653501__vekon__flow-break.wav-da9ce8da08684aa781d760a79f237404.sample"]
+source_file="res://Sounds/653501__vekon__flow-break.wav"
+dest_files=["res://.godot/imported/653501__vekon__flow-break.wav-d457435aed433ecfbaaf54b77ec1ac14.sample"]
 
 [params]
 
