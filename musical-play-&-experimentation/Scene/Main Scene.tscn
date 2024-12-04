@@ -1,5 +1,6 @@
-[gd_scene load_steps=15 format=3 uid="uid://dfov5k6b6yjtn"]
+[gd_scene load_steps=14 format=3 uid="uid://dfov5k6b6yjtn"]
 
+[ext_resource type="Texture2D" uid="uid://cthif3tfne42k" path="res://Background Image/Red & Black Skull Background.jpg" id="1_2ain2"]
 [ext_resource type="Script" path="res://Scripts/Pads.gd" id="1_u1eqw"]
 [ext_resource type="AudioStream" uid="uid://0bxx676eu6bi" path="res://Sounds/653501__vekon__flow-break.wav" id="2_0s5c2"]
 [ext_resource type="AudioStream" uid="uid://b0ng4hg3cwvbe" path="res://Sounds/759863__patitodilluvio__brokenbreak.wav" id="3_wxun3"]
@@ -9,14 +10,8 @@
 [ext_resource type="AudioStream" uid="uid://ckhi4qa8jsail" path="res://Sounds/26473__lim__distorted_bass.wav" id="7_2pagh"]
 [ext_resource type="Script" path="res://Scripts/Volume Slider.gd" id="8_68onu"]
 
-[sub_resource type="Gradient" id="Gradient_fbqfg"]
-colors = PackedColorArray(0.223529, 0.223529, 0.223529, 1, 0.223103, 0.223103, 0.223103, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_2lgd0"]
-gradient = SubResource("Gradient_fbqfg")
-
 [sub_resource type="Gradient" id="Gradient_ay2ow"]
-colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
+colors = PackedColorArray(0.384667, 0, 0, 1, 0.91227, 6.23293e-06, 8.66354e-07, 1)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_ue3po"]
 gradient = SubResource("Gradient_ay2ow")
@@ -30,130 +25,160 @@ gradient = SubResource("Gradient_wlypr")
 [node name="Node2D" type="Node2D"]
 
 [node name="Main Background" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(512, 384)
-scale = Vector2(16, 12)
-texture = SubResource("GradientTexture2D_2lgd0")
+position = Vector2(811.222, 384)
+scale = Vector2(0.846644, 0.711111)
+texture = ExtResource("1_2ain2")
 
 [node name="Pads" type="Node2D" parent="."]
 
-[node name="Pad 1" type="Sprite2D" parent="Pads" node_paths=PackedStringArray("sound")]
+[node name="Pad 1" type="Sprite2D" parent="Pads"]
 position = Vector2(112, 112)
+rotation = -1.57079
 scale = Vector2(0.6875, 176)
 texture = SubResource("GradientTexture1D_ue3po")
+
+[node name="Sprite2D" type="Sprite2D" parent="Pads/Pad 1" node_paths=PackedStringArray("sound")]
+position = Vector2(9.05991e-06, 7.17118e-08)
+scale = Vector2(3.63636, 0.0142045)
+texture = SubResource("GradientTexture2D_1x0se")
 script = ExtResource("1_u1eqw")
 keybind = "7"
-sound = NodePath("../../Sounds/Sound 1")
+sound = NodePath("../../../Sounds/Sound 1")
 
-[node name="Sprite2D" type="Sprite2D" parent="Pads/Pad 1"]
+[node name="Pad 2" type="Sprite2D" parent="Pads"]
+position = Vector2(312, 112)
+rotation = -1.57079
+scale = Vector2(0.6875, 176)
+texture = SubResource("GradientTexture1D_ue3po")
+
+[node name="Sprite2D" type="Sprite2D" parent="Pads/Pad 2" node_paths=PackedStringArray("sound")]
 position = Vector2(9.05991e-06, 7.17118e-08)
 scale = Vector2(3.63636, 0.0142045)
 texture = SubResource("GradientTexture2D_1x0se")
-
-[node name="Pad 2" type="Sprite2D" parent="Pads" node_paths=PackedStringArray("sound")]
-position = Vector2(312, 112)
-scale = Vector2(0.6875, 176)
-texture = SubResource("GradientTexture1D_ue3po")
 script = ExtResource("1_u1eqw")
 keybind = "8"
-sound = NodePath("../../Sounds/Sound 2")
+sound = NodePath("../../../Sounds/Sound 2")
 
-[node name="Sprite2D" type="Sprite2D" parent="Pads/Pad 2"]
+[node name="Pad 3" type="Sprite2D" parent="Pads"]
+position = Vector2(512, 112)
+rotation = -1.57079
+scale = Vector2(0.6875, 176)
+texture = SubResource("GradientTexture1D_ue3po")
+
+[node name="Sprite2D" type="Sprite2D" parent="Pads/Pad 3" node_paths=PackedStringArray("sound")]
 position = Vector2(9.05991e-06, 7.17118e-08)
 scale = Vector2(3.63636, 0.0142045)
 texture = SubResource("GradientTexture2D_1x0se")
-
-[node name="Pad 3" type="Sprite2D" parent="Pads" node_paths=PackedStringArray("sound")]
-position = Vector2(512, 112)
-scale = Vector2(0.6875, 176)
-texture = SubResource("GradientTexture1D_ue3po")
 script = ExtResource("1_u1eqw")
 keybind = "9"
-sound = NodePath("../../Sounds/Sound 3")
+sound = NodePath("../../../Sounds/Sound 3")
 
-[node name="Sprite2D" type="Sprite2D" parent="Pads/Pad 3"]
+[node name="Pad 4" type="Sprite2D" parent="Pads"]
+position = Vector2(112, 336)
+rotation = -1.57079
+scale = Vector2(0.6875, 176)
+texture = SubResource("GradientTexture1D_ue3po")
+
+[node name="Sprite2D" type="Sprite2D" parent="Pads/Pad 4" node_paths=PackedStringArray("sound")]
 position = Vector2(9.05991e-06, 7.17118e-08)
 scale = Vector2(3.63636, 0.0142045)
 texture = SubResource("GradientTexture2D_1x0se")
-
-[node name="Pad 4" type="Sprite2D" parent="Pads" node_paths=PackedStringArray("sound")]
-position = Vector2(112, 336)
-scale = Vector2(0.6875, 176)
-texture = SubResource("GradientTexture1D_ue3po")
 script = ExtResource("1_u1eqw")
 keybind = "4"
-sound = NodePath("../../Sounds/Sound 4")
+sound = NodePath("../../../Sounds/Sound 4")
 
-[node name="Sprite2D" type="Sprite2D" parent="Pads/Pad 4"]
+[node name="Pad 5" type="Sprite2D" parent="Pads"]
+position = Vector2(312, 336)
+rotation = -1.57079
+scale = Vector2(0.6875, 176)
+texture = SubResource("GradientTexture1D_ue3po")
+
+[node name="Sprite2D" type="Sprite2D" parent="Pads/Pad 5" node_paths=PackedStringArray("sound")]
 position = Vector2(9.05991e-06, 7.17118e-08)
 scale = Vector2(3.63636, 0.0142045)
 texture = SubResource("GradientTexture2D_1x0se")
-
-[node name="Pad 5" type="Sprite2D" parent="Pads" node_paths=PackedStringArray("sound")]
-position = Vector2(312, 336)
-scale = Vector2(0.6875, 176)
-texture = SubResource("GradientTexture1D_ue3po")
 script = ExtResource("1_u1eqw")
 keybind = "5"
-sound = NodePath("../../Sounds/Sound 5")
+sound = NodePath("../../../Sounds/Sound 5")
 
-[node name="Sprite2D" type="Sprite2D" parent="Pads/Pad 5"]
+[node name="Pad 6" type="Sprite2D" parent="Pads"]
+position = Vector2(512, 336)
+rotation = -1.57079
+scale = Vector2(0.6875, 176)
+texture = SubResource("GradientTexture1D_ue3po")
+
+[node name="Sprite2D" type="Sprite2D" parent="Pads/Pad 6" node_paths=PackedStringArray("sound")]
 position = Vector2(9.05991e-06, 7.17118e-08)
 scale = Vector2(3.63636, 0.0142045)
 texture = SubResource("GradientTexture2D_1x0se")
-
-[node name="Pad 6" type="Sprite2D" parent="Pads" node_paths=PackedStringArray("sound")]
-position = Vector2(512, 336)
-scale = Vector2(0.6875, 176)
-texture = SubResource("GradientTexture1D_ue3po")
 script = ExtResource("1_u1eqw")
 keybind = "6"
-sound = NodePath("../../Sounds/Sound 6")
+sound = NodePath("../../../Sounds/Sound 6")
 
-[node name="Sprite2D" type="Sprite2D" parent="Pads/Pad 6"]
-position = Vector2(9.05991e-06, 7.17118e-08)
-scale = Vector2(3.63636, 0.0142045)
-texture = SubResource("GradientTexture2D_1x0se")
-
-[node name="Pad 7" type="Sprite2D" parent="Pads" node_paths=PackedStringArray("sound")]
+[node name="Pad 7" type="Sprite2D" parent="Pads"]
 position = Vector2(112, 560)
+rotation = -1.57079
 scale = Vector2(0.6875, 176)
 texture = SubResource("GradientTexture1D_ue3po")
-script = ExtResource("1_u1eqw")
-sound = NodePath("../../Sounds/Sound 3")
 
-[node name="Sprite2D" type="Sprite2D" parent="Pads/Pad 7"]
+[node name="Sprite2D" type="Sprite2D" parent="Pads/Pad 7" node_paths=PackedStringArray("sound")]
 position = Vector2(9.05991e-06, 7.17118e-08)
 scale = Vector2(3.63636, 0.0142045)
 texture = SubResource("GradientTexture2D_1x0se")
+script = ExtResource("1_u1eqw")
+sound = NodePath("../../../Sounds/Sound 7")
 
-[node name="Pad 8" type="Sprite2D" parent="Pads" node_paths=PackedStringArray("sound")]
+[node name="Pad 8" type="Sprite2D" parent="Pads"]
 position = Vector2(312, 560)
+rotation = -1.57079
 scale = Vector2(0.6875, 176)
 texture = SubResource("GradientTexture1D_ue3po")
+
+[node name="Sprite2D" type="Sprite2D" parent="Pads/Pad 8" node_paths=PackedStringArray("sound")]
+position = Vector2(9.05991e-06, 7.17118e-08)
+scale = Vector2(3.63636, 0.0142045)
+texture = SubResource("GradientTexture2D_1x0se")
 script = ExtResource("1_u1eqw")
 keybind = "2"
-sound = NodePath("../../Sounds/Sound 3")
+sound = NodePath("../../../Sounds/Sound 8")
 
-[node name="Sprite2D" type="Sprite2D" parent="Pads/Pad 8"]
-position = Vector2(9.05991e-06, 7.17118e-08)
-scale = Vector2(3.63636, 0.0142045)
-texture = SubResource("GradientTexture2D_1x0se")
-
-[node name="Pad 9" type="Sprite2D" parent="Pads" node_paths=PackedStringArray("sound")]
+[node name="Pad 9" type="Sprite2D" parent="Pads"]
 position = Vector2(512, 560)
+rotation = -1.57079
 scale = Vector2(0.6875, 176)
 texture = SubResource("GradientTexture1D_ue3po")
-script = ExtResource("1_u1eqw")
-keybind = "3"
-sound = NodePath("../../Sounds/Sound 3")
 
-[node name="Sprite2D" type="Sprite2D" parent="Pads/Pad 9"]
+[node name="Sprite2D" type="Sprite2D" parent="Pads/Pad 9" node_paths=PackedStringArray("sound")]
 position = Vector2(9.05991e-06, 7.17118e-08)
 scale = Vector2(3.63636, 0.0142045)
 texture = SubResource("GradientTexture2D_1x0se")
+script = ExtResource("1_u1eqw")
+keybind = "3"
+sound = NodePath("../../../Sounds/Sound 9")
 
 [node name="Sounds" type="Node2D" parent="."]
+
+[node name="Master Volume" type="Label" parent="Sounds"]
+offset_left = 640.0
+offset_top = 24.0
+offset_right = 787.0
+offset_bottom = 56.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Master Volume"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Master Volume Slider" type="HSlider" parent="Sounds/Master Volume"]
+layout_mode = 0
+offset_top = 40.0
+offset_right = 344.0
+offset_bottom = 56.0
+max_value = 1.0
+step = 0.001
+script = ExtResource("8_68onu")
+bus_name = "Master"
 
 [node name="Sound 1" type="AudioStreamPlayer2D" parent="Sounds"]
 stream = ExtResource("2_0s5c2")
@@ -166,6 +191,8 @@ offset_right = 200.0
 offset_bottom = 232.0
 max_value = 1.0
 step = 0.001
+tick_count = 7
+ticks_on_borders = true
 script = ExtResource("8_68onu")
 bus_name = "Sound 1"
 
@@ -180,6 +207,8 @@ offset_right = 400.0
 offset_bottom = 232.0
 max_value = 1.0
 step = 0.001
+tick_count = 7
+ticks_on_borders = true
 script = ExtResource("8_68onu")
 bus_name = "Sound 2"
 
@@ -195,6 +224,8 @@ offset_right = 589.0
 offset_bottom = 232.0
 max_value = 1.0
 step = 0.001
+tick_count = 7
+ticks_on_borders = true
 script = ExtResource("8_68onu")
 bus_name = "Sound 3"
 
@@ -210,6 +241,8 @@ offset_right = 186.0
 offset_bottom = 456.0
 max_value = 1.0
 step = 0.001
+tick_count = 7
+ticks_on_borders = true
 script = ExtResource("8_68onu")
 bus_name = "Sound 4"
 
@@ -224,6 +257,8 @@ offset_right = 400.0
 offset_bottom = 456.0
 max_value = 1.0
 step = 0.001
+tick_count = 7
+ticks_on_borders = true
 script = ExtResource("8_68onu")
 bus_name = "Sound 5"
 
@@ -238,6 +273,8 @@ offset_right = 600.0
 offset_bottom = 456.0
 max_value = 1.0
 step = 0.001
+tick_count = 7
+ticks_on_borders = true
 script = ExtResource("8_68onu")
 bus_name = "Sound 6"
 
@@ -251,6 +288,8 @@ offset_right = 200.0
 offset_bottom = 680.0
 max_value = 1.0
 step = 0.001
+tick_count = 7
+ticks_on_borders = true
 script = ExtResource("8_68onu")
 bus_name = "Sound 7"
 
@@ -264,6 +303,8 @@ offset_right = 400.0
 offset_bottom = 680.0
 max_value = 1.0
 step = 0.001
+tick_count = 7
+ticks_on_borders = true
 script = ExtResource("8_68onu")
 bus_name = "Sound 8"
 
@@ -277,27 +318,7 @@ offset_right = 600.0
 offset_bottom = 680.0
 max_value = 1.0
 step = 0.001
+tick_count = 7
+ticks_on_borders = true
 script = ExtResource("8_68onu")
 bus_name = "Sound 9"
-
-[node name="Master Volume" type="HSlider" parent="."]
-offset_left = 640.0
-offset_top = 64.0
-offset_right = 984.0
-offset_bottom = 80.0
-max_value = 1.0
-step = 0.001
-script = ExtResource("8_68onu")
-bus_name = "Master"
-
-[node name="Label" type="Label" parent="."]
-offset_left = 640.0
-offset_top = 24.0
-offset_right = 787.0
-offset_bottom = 56.0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 20
-text = "Master Volume"
-horizontal_alignment = 1
-vertical_alignment = 1
