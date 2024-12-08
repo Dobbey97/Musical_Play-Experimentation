@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dm4531el2ti5c"
+path="res://.godot/imported/Sound 5 - Drums.wav-63d45f60078c7816a389032f1fb976fd.sample"
+
+[deps]
+
+source_file="res://Sounds/Sound 5 - Drums.wav"
+dest_files=["res://.godot/imported/Sound 5 - Drums.wav-63d45f60078c7816a389032f1fb976fd.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

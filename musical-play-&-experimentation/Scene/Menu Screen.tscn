@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://dq23pa4uc44nf"]
+
+[ext_resource type="Script" path="res://Scripts/Menu Screen.gd" id="1_44nb2"]
+
+[node name="Menu Screen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_44nb2")
+
+[node name="Start Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 168.0
+offset_top = 280.0
+offset_right = 896.0
+offset_bottom = 456.0
+text = "Start"

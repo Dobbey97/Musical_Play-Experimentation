@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://5sexvv32x26t"
+path="res://.godot/imported/Sound 7 - Snare.wav-961a16f9264e6b10abfafa76961bca9c.sample"
+
+[deps]
+
+source_file="res://Sounds/Sound 7 - Snare.wav"
+dest_files=["res://.godot/imported/Sound 7 - Snare.wav-961a16f9264e6b10abfafa76961bca9c.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
