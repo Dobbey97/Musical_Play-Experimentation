@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dq23pa4uc44nf"]
+[gd_scene load_steps=3 format=3 uid="uid://dq23pa4uc44nf"]
 
 [ext_resource type="Script" path="res://Scripts/Menu Screen.gd" id="1_44nb2"]
+[ext_resource type="Texture2D" uid="uid://bbdavrxpwartq" path="res://Images/Main Menu Background.jpg" id="2_pbbgv"]
 
 [node name="Menu Screen" type="Control"]
 layout_mode = 3
@@ -11,10 +12,29 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_44nb2")
 
+[node name="Main Menu Background" type="Sprite2D" parent="."]
+position = Vector2(528, 384)
+scale = Vector2(1.99223, 1.99223)
+texture = ExtResource("2_pbbgv")
+
 [node name="Start Button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 168.0
-offset_top = 280.0
-offset_right = 896.0
-offset_bottom = 456.0
+offset_left = 192.0
+offset_top = 128.0
+offset_right = 832.0
+offset_bottom = 320.0
+theme_override_font_sizes/font_size = 50
 text = "Start"
+
+[node name="Quit Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 448.0
+offset_right = 832.0
+offset_bottom = 640.0
+theme_override_font_sizes/font_size = 50
+text = "Quit
+"
+
+[connection signal="pressed" from="Start Button" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="Quit Button" to="." method="_on_quit_button_pressed"]

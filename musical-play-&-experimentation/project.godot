@@ -11,7 +11,12 @@ config_version=5
 [application]
 
 config/name="Musical Play & Experimentation"
+run/main_scene="res://Scene/Menu Screen.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
+
+[audio]
+
+buses/default_bus_layout="res://Sounds/default_bus_layout.tres"
 
 [display]
 

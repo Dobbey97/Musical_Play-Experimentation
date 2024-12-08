@@ -1,6 +1,6 @@
-[gd_scene load_steps=17 format=3 uid="uid://cv2lwf0ds5jdn"]
+[gd_scene load_steps=18 format=3 uid="uid://cv2lwf0ds5jdn"]
 
-[ext_resource type="Texture2D" uid="uid://cthif3tfne42k" path="res://Images/Red & Black Skull Background.jpg" id="1_370wv"]
+[ext_resource type="Texture2D" uid="uid://cthif3tfne42k" path="res://Images/MIDI Controller Background.jpg" id="1_370wv"]
 [ext_resource type="Script" path="res://Scripts/Pads.gd" id="2_uuw3i"]
 [ext_resource type="Script" path="res://Scripts/Volume Slider.gd" id="3_nf4ta"]
 [ext_resource type="AudioStream" uid="uid://0bxx676eu6bi" path="res://Sounds/Sound 1 - Flow Break.wav" id="4_sn086"]
@@ -12,6 +12,7 @@
 [ext_resource type="AudioStream" uid="uid://5sexvv32x26t" path="res://Sounds/Sound 7 - Snare.wav" id="10_xnf8y"]
 [ext_resource type="AudioStream" uid="uid://di20g4h3isfd8" path="res://Sounds/Sound 8 - Bass Fade.wav" id="11_j26uq"]
 [ext_resource type="AudioStream" uid="uid://c8yovdyjqgh65" path="res://Sounds/Sound 9 - Yeah Boi.wav" id="12_cdfeh"]
+[ext_resource type="Script" path="res://Scripts/Return To Main Menu.gd" id="13_sd51v"]
 
 [sub_resource type="Gradient" id="Gradient_ay2ow"]
 colors = PackedColorArray(0.384667, 0, 0, 1, 0.91227, 6.23293e-06, 8.66354e-07, 1)
@@ -27,10 +28,19 @@ gradient = SubResource("Gradient_wlypr")
 
 [node name="MIDI Controller" type="Node2D"]
 
-[node name="Main Background" type="Sprite2D" parent="."]
+[node name="MIDI Background" type="Sprite2D" parent="."]
 position = Vector2(811.222, 384)
 scale = Vector2(0.846644, 0.711111)
 texture = ExtResource("1_370wv")
+
+[node name="Main Menu Button" type="Button" parent="."]
+offset_left = 672.0
+offset_top = 640.0
+offset_right = 928.0
+offset_bottom = 704.0
+theme_override_font_sizes/font_size = 40
+text = "Main Menu"
+script = ExtResource("13_sd51v")
 
 [node name="Pads" type="Node2D" parent="."]
 
@@ -328,3 +338,5 @@ tick_count = 7
 ticks_on_borders = true
 script = ExtResource("3_nf4ta")
 bus_name = "Sound 9"
+
+[connection signal="pressed" from="Main Menu Button" to="Main Menu Button" method="_on_pressed"]

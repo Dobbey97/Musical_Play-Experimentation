@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cthif3tfne42k"
-path="res://.godot/imported/Red & Black Skull Background.jpg-4773c080bba1f1a7f0d87b8647e1a11e.ctex"
+uid="uid://bbdavrxpwartq"
+path="res://.godot/imported/Main Menu Background.jpg-76ce2a75216bce9ee9dea764491780aa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/Red & Black Skull Background.jpg"
-dest_files=["res://.godot/imported/Red & Black Skull Background.jpg-4773c080bba1f1a7f0d87b8647e1a11e.ctex"]
+source_file="res://Images/Main Menu Background.jpg"
+dest_files=["res://.godot/imported/Main Menu Background.jpg-76ce2a75216bce9ee9dea764491780aa.ctex"]
 
 [params]
 
