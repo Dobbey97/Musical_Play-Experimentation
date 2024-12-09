@@ -13,3 +13,9 @@ Features:
   - Volume Sliders for each pad
   - Master Volume control
 
+Video Demonstration:
+
+
+
+https://github.com/user-attachments/assets/f46ae477-ff58-413d-9b91-c64bf822f403
+
